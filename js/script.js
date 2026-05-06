@@ -341,7 +341,7 @@ function mostrarEstadoVazio() {
       <div class="empty-skull">💀</div>
       <div class="empty-text">
         O baralho aguarda...<br>
-        Sortie uma carta para começar
+        Sortei uma carta para começar
       </div>
     </div>`;
 }

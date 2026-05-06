@@ -10,7 +10,7 @@
     --cream: #e8dcc8;
     --grey: #3a3535;
     --light-grey: #6b6060;
-    }
+}
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -22,7 +22,8 @@ body {
     overflow-x: hidden;
     cursor: default;
     user-select: none;
-    }
+    -webkit-tap-highlight-color: transparent;
+}
 
 /* ── BACKGROUND TEXTURE ── */
 body::before {
@@ -158,6 +159,8 @@ main {
     cursor: pointer;
     border-radius: 16px;
     will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 .card.dealing {
