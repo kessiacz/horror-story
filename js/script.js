@@ -374,7 +374,7 @@ function renderizarCarta() {
           <span class="card-number-badge">Nº ${String(cartaAtual.id).padStart(2,'0')}</span>
           
           <div class="card-ornament-top">
-            <div class="card-logo">Mystery Stories</div>
+            <div class="card-logo">Shadow Stories</div>
             <div class="ornament-line">
               <div class="ornament-diamond"></div>
             </div>
