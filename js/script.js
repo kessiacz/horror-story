@@ -1,0 +1,478 @@
+// ══════════════════════════════════════════════════
+// HISTÓRIAS — BLACK STORIES 50 ENIGMAS MACABROS
+// ══════════════════════════════════════════════════
+const historias = [
+  {
+    id: 1,
+    titulo: "O Homem no Campo",
+    frente: "Um homem está morto num campo aberto. Ao seu lado há uma mochila fechada. Como ele morreu?",
+    verso: "O homem havia saltado de um avião com um <span class='highlight'>paraquedas que não abriu</span>. A mochila fechada ao seu lado era justamente o paraquedas que ele jamais conseguiu acionar a tempo."
+  },
+  {
+    id: 2,
+    titulo: "Tony",
+    frente: "Tony está morto no chão. Ao redor dele há água e cacos de vidro. O que aconteceu com Tony?",
+    verso: "Tony era um <span class='highlight'>peixe</span>. Alguém derrubou a sua aquário, que se quebrou. Tony morreu sem água, cercado pelos cacos do vidro estilhaçado."
+  },
+  {
+    id: 3,
+    titulo: "O Elevador",
+    frente: "Um homem mora no 30º andar. Todo dia sobe de elevador até o 15º e depois vai a pé até o 30º. Por quê?",
+    verso: "O homem é <span class='highlight'>anão</span> e não consegue alcançar o botão do 30º andar no painel do elevador. No 15º, ele consegue pressionar o botão. Nos dias de chuva, usa o guarda-chuva para alcançar o botão mais alto."
+  },
+  {
+    id: 4,
+    titulo: "A Música",
+    frente: "Um homem ouve uma música no rádio e vai para casa correr e matar a sua esposa. Por quê?",
+    verso: "O homem era <span class='highlight'>músico cego</span>. Naquele dia, o locutor disse o nome da música ao vivo. Era uma música que ele havia composto especialmente para sua esposa, que jurava nunca ter tocado para ninguém. Ele concluiu que ela estava tendo um caso com seu produtor."
+  },
+  {
+    id: 5,
+    titulo: "A Cabine Telefônica",
+    frente: "Um homem entra numa cabine telefônica, faz uma ligação e sai morto. O que aconteceu?",
+    verso: "O homem ligou para casa e sua esposa atendeu — mas ela havia morrido três dias antes. Ele havia pedido para ser avisado sobre sua morte por telefone. Com o choque, o homem sofreu um <span class='highlight'>infarto fulminante</span> ainda dentro da cabine."
+  },
+  {
+    id: 6,
+    titulo: "A Mulher no Hotel",
+    frente: "Uma mulher chega a um hotel e sabe imediatamente que seu marido está morto. Como ela sabe?",
+    verso: "Ela havia ligado para o hotel antes de chegar para dizer ao atendente que estava vindo, mas que o seu marido não sabia. O atendente disse: <span class='highlight'>&quot;Lamento, senhora, mas seu marido foi encontrado morto no quarto esta manhã.&quot;</span> A mensagem que ela deixou para seu marido nunca foi entregue."
+  },
+  {
+    id: 7,
+    titulo: "O Restaurante",
+    frente: "Uma mulher come num restaurante, pede um molho especial, prova e chama a polícia. Por quê?",
+    verso: "A mulher era esposa de um cozinheiro desaparecido. Ao provar o molho, reconheceu o <span class='highlight'>sabor exato</span> da receita secreta do marido — que ele só sabia fazer. A polícia encontrou os restos mortais do cozinheiro no porão do restaurante, junto à receita."
+  },
+  {
+    id: 8,
+    titulo: "O Pescador",
+    frente: "Um pescador puxa um peixe e fica tão aterrorizado que liga imediatamente para a polícia. Por quê?",
+    verso: "Dentro da boca do peixe havia um <span class='highlight'>dedo humano com uma aliança</span> que o pescador reconheceu — era a aliança de casamento de seu irmão desaparecido há meses, cujo barco havia naufragado naquela região."
+  },
+  {
+    id: 9,
+    titulo: "A Câmara Fechada",
+    frente: "Um homem é encontrado morto numa câmara completamente fechada por dentro. Não há arma. Como morreu?",
+    verso: "O assassino usou uma <span class='highlight'>arma feita de gelo</span>. O tiro foi disparado de fora por uma pequena abertura que depois foi tampada. O gelo derreteu completamente, e a água escorreu pelo ralo, eliminando toda evidência da arma."
+  },
+  {
+    id: 10,
+    titulo: "A Viagem de Carro",
+    frente: "Uma mulher dirige por 5 horas com seu marido no banco do carona. Ao chegar, ele está morto. O que aconteceu?",
+    verso: "O marido havia <span class='highlight'>morrido antes da viagem começar</span>, mas a mulher não percebeu — ela pensou que ele estava dormindo. Um aneurisma cerebral o matou logo ao entrar no carro. Ele não fez nenhum barulho ou movimento."
+  },
+  {
+    id: 11,
+    titulo: "O Homem Pendurado",
+    frente: "Um homem é encontrado morto, pendurado no teto de uma sala vazia. O piso está 50 cm abaixo de seus pés. Não há móveis nem marcas no chão. Como chegou lá?",
+    verso: "O homem se suicidou subindo num <span class='highlight'>grande bloco de gelo</span> e se enforcou. Com o tempo, o gelo derreteu completamente — a água evaporou pelo calor da sala — deixando o corpo suspenso e nenhuma evidência visível."
+  },
+  {
+    id: 12,
+    titulo: "A Última Refeição",
+    frente: "Um condenado à morte pede seu último jantar: pão com manteiga. Ao terminar, ele é salvo da execução. Como isso é possível?",
+    verso: "O condenado sabia que era <span class='highlight'>alérgico à manteiga</span>. Ele entrou em choque anafilático severo e foi levado às pressas ao hospital. Enquanto estava em tratamento, a corte superior revisou seu caso e ele foi inocentado — e sobreviveu à execução."
+  },
+  {
+    id: 13,
+    titulo: "O Farol",
+    frente: "Um guarda de farol apaga a luz por apenas cinco minutos e três navios naufragam. Como é possível?",
+    verso: "Os três navios estavam esperando o <span class='highlight'>sinal do farol para desviar</span> de rochas submersa. Quando a luz apagou, os capitães assumiram que o trecho era seguro e avançaram diretamente em direção às pedras. Os três naufragaram em sequência."
+  },
+  {
+    id: 14,
+    titulo: "O Homem na Sacada",
+    frente: "Um homem num hotel olha pela janela, abre a varanda e pula. Ele sobrevive. Como?",
+    verso: "Ele estava no <span class='highlight'>primeiro andar</span>. O homem havia se engalfinhado com um assaltante em seu quarto e, para escapar, pulou pela varanda — caindo apenas 1,5 metro abaixo, no jardim do hotel, sem nenhum ferimento grave."
+  },
+  {
+    id: 15,
+    titulo: "A Fotografia",
+    frente: "Um detetive analisa uma foto de família de cinco pessoas e imediatamente prende uma delas por assassinato. Por quê?",
+    verso: "Na foto, todos os cinco membros apareciam sorrindo e olhando para a câmera. Mas a <span class='highlight'>câmera estava no timer automático</span> — não havia ninguém para fotografá-los. O suspeito havia mentido dizendo que estava fora quando o crime ocorreu. A foto provou que ele estava lá."
+  },
+  {
+    id: 16,
+    titulo: "O Elevador Travado",
+    frente: "Uma mulher entra num elevador no 40º andar, o elevador trava e ela morre de fome. Por quê não gritou por socorro?",
+    verso: "A mulher era <span class='highlight'>surda-muda</span> e não sabia que o botão de alarme havia travado também. Ela tentou gritar mas não emitia sons. O edifício estava parcialmente desocupado por reforma, e ninguém passou pelo corredor por dias. Foi encontrada quatro dias depois."
+  },
+  {
+    id: 17,
+    titulo: "Os Dois Irmãos",
+    frente: "Dois irmãos gêmeos nasceram no mesmo dia, no mesmo mês, no mesmo ano — mas não fazem aniversário juntos. Por quê?",
+    verso: "Os gêmeos nasceram na <span class='highlight'>virada da meia-noite</span>. O primeiro nasceu às 23h58 e o segundo às 00h02 do dia seguinte. Portanto, nasceram em dias diferentes — um em 28 de fevereiro, outro em 1º de março."
+  },
+  {
+    id: 18,
+    titulo: "O Acidente de Carro",
+    frente: "Um pai e um filho sofrem um grave acidente. O pai morre no local. O médico que atende o filho no hospital diz: 'Não posso operar, é meu filho!' Como é possível?",
+    verso: "O médico é a <span class='highlight'>mãe</span> do menino. Não há nenhum mistério sobrenatural — apenas um preconceito de quem assume que médico é necessariamente um homem."
+  },
+  {
+    id: 19,
+    titulo: "A Janela Aberta",
+    frente: "Uma mulher encontra seu marido morto no escritório. A janela está aberta, papéis espalhados no chão. A polícia diz que foi suicídio. Ela insiste que foi assassinato. Por quê?",
+    verso: "Os papéis estavam espalhados no chão, mas a janela estava aberta. Se o marido havia se matado, teria <span class='highlight'>fechado a janela antes</span> — era inverno e ele era obcecado com organização. Os papéis estariam no lugar. Alguém entrou pela janela, matou-o e saiu — criando a cena para parecer suicídio."
+  },
+  {
+    id: 20,
+    titulo: "O Cirurgião",
+    frente: "Um cirurgião opera um paciente por horas. Quando termina, mata o paciente. Por quê?",
+    verso: "O cirurgião era um <span class='highlight'>veterinário</span> que operou o animal de estimação do paciente. Ao terminar a cirurgia bem-sucedida, percebeu que o animal já estava com câncer terminal e sofrendo — e o eutanasiou por compaixão, a pedido silencioso do dono."
+  },
+  {
+    id: 21,
+    titulo: "O Naufrágio",
+    frente: "Há um naufrágio. Todos os casais sobrevivem. Todos os solteiros morrem. Por quê?",
+    verso: "O navio afundou perto de uma ilha habitada por uma tribo hostil. Os <span class='highlight'>solteiros alcançaram a praia primeiro</span> e foram capturados e mortos pela tribo. Os casais chegaram depois em grupos, o que intimidou os nativos, que recuaram. Os casais foram resgatados dias depois."
+  },
+  {
+    id: 22,
+    titulo: "O Detetive e a Neve",
+    frente: "Um detetive chega a uma cena de crime. Há pegadas na neve levando à janela, mas nenhuma saindo. O suspeito diz que não estava lá. O detetive sabe que está mentindo. Como?",
+    verso: "As pegadas <span class='highlight'>iam em direção à janela</span>, mas eram fundas na ida e rasas na volta — o suspeito havia andado de costas para fingir que as pegadas iam apenas até a janela e não voltavam. O detetive percebeu que o padrão das pegadas era invertido."
+  },
+  {
+    id: 23,
+    titulo: "O Homem no Bar",
+    frente: "Um homem entra num bar, pede um copo d'água, o barman aponta uma arma para ele. O homem agradece e vai embora feliz. O que aconteceu?",
+    verso: "O homem tinha <span class='highlight'>soluço crônico</span> há dias e havia tentado de tudo para parar. O barman entendeu a situação — o susto do revólver curou instantaneamente o soluço. O homem foi embora aliviado e grato."
+  },
+  {
+    id: 24,
+    titulo: "A Médica",
+    frente: "Uma médica declara um homem morto. Enquanto está sendo embalsamado, o embalsamador percebe que ele está vivo. Como a médica errou?",
+    verso: "A médica não havia errado. O homem estava em um estado de <span class='highlight'>morte aparente cataléptica</span>, com sinais vitais tão fracos que qualquer exame básico os ignoraria. O embalsamador notou ao iniciar o procedimento que o corpo ainda exibia espasmos musculares mínimos — sinal de vida."
+  },
+  {
+    id: 25,
+    titulo: "O Homem nos Macacos",
+    frente: "Um homem fantasiado de macaco é encontrado morto numa floresta. O que aconteceu?",
+    verso: "O homem trabalhava num zoológico. Macacos fugiram e ele foi buscar as fantasias do almoxarifado para atraí-los. O <span class='highlight'>guarda-noturno</span>, ao vê-lo no escuro, confundiu com um macaco real e atirou, acertando-o fatalmente antes de perceber o erro."
+  },
+  {
+    id: 26,
+    titulo: "A Queda",
+    frente: "Uma mulher pula de um prédio de 20 andares. Quando passa pela janela do 10º andar, ela vê algo que a faz mudar de ideia — mas já é tarde demais. O que ela viu?",
+    verso: "Ela viu o seu <span class='highlight'>marido, com quem havia brigado mortalmente</span>, abraçando e beijando outra mulher através da janela do 10º andar. O apartamento pertencia ao próprio casal — e o marido estava tendo um caso. Ela se arrependeu da decisão tomada por raiva, mas já era tarde."
+  },
+  {
+    id: 27,
+    titulo: "O Trenó",
+    frente: "Um homem é encontrado morto ao lado de um trenó numa estrada deserta no Ártico. Não há marcas de luta. O que aconteceu?",
+    verso: "O homem havia amarrado o trenó a si mesmo e deixado os cachorros correrem — um método tradicional de viagem. Mas os animais <span class='highlight'>deram a volta em torno de uma árvore</span> presa no gelo. O homem ficou enrolado no laço e acabou estrangulado enquanto os cães continuavam a girar."
+  },
+  {
+    id: 28,
+    titulo: "A Testemunha Cega",
+    frente: "Uma testemunha cega identifica com certeza o assassino. Como é possível?",
+    verso: "A testemunha cega havia reconhecido o <span class='highlight'>cheiro de perfume exclusivo</span> do assassino — uma fragrância personalizada que a testemunha havia presenteado ao culpado anos antes, e que era literalmente única no mundo. O assassino usava o perfume no dia do crime."
+  },
+  {
+    id: 29,
+    titulo: "A Ligação",
+    frente: "Um homem recebe uma ligação às 3h da manhã de um número desconhecido. Apenas respira. No dia seguinte, vai à polícia. Por quê?",
+    verso: "O homem era <span class='highlight'>detetive especializado em casos de desaparecimentos</span>. Ao ouvir apenas a respiração, reconheceu o padrão — respiração entrecortada de alguém com a boca parcialmente tapada. Rastreou o número e encontrou uma mulher sequestrada que havia discado às cegas no escuro. Ele a salvou."
+  },
+  {
+    id: 30,
+    titulo: "O Suicida Feliz",
+    frente: "Um homem se joga de uma ponte e morre. Suas últimas anotações revelam que ele era a pessoa mais feliz do mundo. O que aconteceu?",
+    verso: "O homem havia descoberto na véspera que havia <span class='highlight'>ganhado na loteria</span>. Mas a euforia extrema desencadeou um episódio maníaco severo — ele tinha transtorno bipolar não diagnosticado. Em estado de mania aguda, com pensamentos acelerados e impulsividade extrema, pulou da ponte sem perceber a gravidade do ato."
+  },
+  {
+    id: 31,
+    titulo: "O Gêmeo",
+    frente: "Um homem visita seu gêmeo idêntico na prisão e sai no lugar dele. A guarda percebe imediatamente. Como?",
+    verso: "Os gêmeos eram fisicamente idênticos, mas o preso tinha uma <span class='highlight'>tatuagem no pulso</span> com a data de sua condenação. O homem livre não tinha. A guarda notou ao solicitar a identificação padrão de saída — os pulsos revelaram tudo."
+  },
+  {
+    id: 32,
+    titulo: "O Barulho",
+    frente: "Uma mulher ouve um barulho à noite, vai investigar e depois de 10 minutos está morta. Não há sinais de invasão. O que aconteceu?",
+    verso: "A mulher era <span class='highlight'>sonâmbula</span>. O barulho a despertou durante o sonambulismo — ela foi investigar ainda dormindo, subiu na janela do sótão e caiu. Não havia intruso algum. A causa da morte foi trauma craniano por queda, sem nenhuma intervenção externa."
+  },
+  {
+    id: 33,
+    titulo: "O Policial e o Ladrão",
+    frente: "Um policial vê um ladrão à distância, sabe que é culpado, mas não pode prendê-lo. Por quê?",
+    verso: "O homem que o policial reconhecia como ladrão havia sido <span class='highlight'>absolvido por dupla incriminação</span>. Pela lei, não pode ser julgado duas vezes pelo mesmo crime — mesmo que novo seja encontrado posteriormente. O policial conhecia a culpa mas estava completamente de mãos atadas pela lei."
+  },
+  {
+    id: 34,
+    titulo: "A Fotógrafa",
+    frente: "Uma fotógrafa tira uma foto numa floresta e, ao revelar, vê que havia capturado um assassinato. Ela não estava lá quando o crime ocorreu. Como?",
+    verso: "A fotógrafa usou câmera com <span class='highlight'>longa exposição temporizada</span> — armou o equipamento apontado para uma clareira, ajustou para disparar sozinha 30 minutos depois e foi embora. O assassinato ocorreu exatamente na clareira durante aquele intervalo, sendo registrado pela câmera sem ninguém ao redor."
+  },
+  {
+    id: 35,
+    titulo: "O Velório",
+    frente: "Durante um velório, uma mulher vê um desconhecido e se apaixona. Na semana seguinte, mata a própria irmã. Por quê?",
+    verso: "A mulher matou a irmã esperando que o <span class='highlight'>desconhecido voltasse ao velório</span>. Ela havia concluído, de forma perturbada, que ele devia ser amigo ou familiar da irmã, e que um novo velório seria a única maneira de encontrá-lo novamente. O desconhecido nunca apareceu."
+  },
+  {
+    id: 36,
+    titulo: "A Corrida",
+    frente: "Dois homens correm uma maratona. O mais lento vence. Como isso é possível?",
+    verso: "A aposta entre os dois era sobre quem chegasse <span class='highlight'>em último lugar</span>. Portanto, cada um tentava correr mais devagar que o outro. Para forçar o adversário a chegar primeiro, o mais inteligente dos dois correu em velocidade máxima — chegando na frente, mas perdendo a aposta por chegar em último."
+  },
+  {
+    id: 37,
+    titulo: "A Faca",
+    frente: "Um homem é encontrado morto com uma faca no peito. A faca não tem impressões digitais, mas o assassino estava lá. Como?",
+    verso: "O assassino usava <span class='highlight'>luvas de pele humana</span> — feitas da pele das palmas das mãos de uma vítima anterior — para criar falsas digitais ou simplesmente não deixar as suas. As autoridades encontraram as luvas escondidas com restos de DNA de outra vítima não identificada."
+  },
+  {
+    id: 38,
+    titulo: "O Farol na Ilha",
+    frente: "O guarda de um farol numa ilha isolada morre de fome. Por quê não foi buscar comida?",
+    verso: "O guarda havia perdido o <span class='highlight'>barco num temporal</span>, o rádio havia queimado no mesmo temporal, e a ilha era desabitada. Ele manteve o farol aceso até o fim esperando ser resgatado. Nenhum navio percebeu os sinais desesperados que ele fazia durante o dia — só viam a luz automatizada."
+  },
+  {
+    id: 39,
+    titulo: "O Alpinista",
+    frente: "Dois alpinistas estão numa montanha. Um cai e sobrevive. O outro não cai e morre. O que aconteceu?",
+    verso: "Estavam amarrados um ao outro. O primeiro caiu no vazio, mas a corda os mantinha ligados. O peso do primeiro <span class='highlight'>puxou o segundo pela borda</span> — mas o segundo ficou preso numa fissura da rocha. O primeiro sobreviveu suspenso pela corda. O segundo ficou preso e morreu de hipotermia antes do resgate chegar."
+  },
+  {
+    id: 40,
+    titulo: "O Último Bilhete",
+    frente: "Uma mulher escreve um bilhete: 'Se eu não voltar em 24h, leia isto.' Ela nunca voltou. O bilhete foi aberto, mas não havia nada escrito. Por quê?",
+    verso: "A mulher havia escrito com <span class='highlight'>tinta invisível sensível ao calor</span>. As instruções para revelação estavam no bilhete — mas só apareciam ao aquecer o papel. Os familiares, sem saber, leram antes de aquecer. Ao jogar o papel no lixo, o calor da lareira próxima revelou as coordenadas de onde ela estava presa."
+  },
+  {
+    id: 41,
+    titulo: "O Sonho",
+    frente: "Um homem acorda de um pesadelo, olha em volta e chora de alívio. Minutos depois, descobre que está realmente em perigo. O que aconteceu?",
+    verso: "O homem havia sonhado que sua casa pegava fogo. Acordou aliviado — mas o <span class='highlight'>cheiro de fumaça ainda permanecia</span>. Levou minutos para perceber que o sonho havia sido ativado pelo fogo real que estava se iniciando no andar de baixo. Ele conseguiu sair, mas perdeu tudo."
+  },
+  {
+    id: 42,
+    titulo: "A Herança",
+    frente: "Um homem morre e deixa toda a herança para o filho que ele nunca amou. Por quê?",
+    verso: "O homem tinha dois filhos: um adorado e um desprezado. Deixou tudo para o filho desprezado porque sabia que o filho querido <span class='highlight'>já havia morrido</span> — mas o testamento havia sido escrito antes da morte do favorito, e ele nunca o atualizou. O advogado executou o documento original."
+  },
+  {
+    id: 43,
+    titulo: "O Trem",
+    frente: "Dois trens partem de cidades opostas e colidem. O maquinista de um trem morre; o do outro sobrevive sem um arranhão. Por quê?",
+    verso: "O segundo maquinista havia <span class='highlight'>saltado do trem momentos antes do impacto</span> — ele havia percebido a falha dos freios e, ao ver que a colisão era inevitável, abandonou a locomotiva. Foi condenado por negligência, mas sobreviveu. O primeiro maquinista tentou frear até o último segundo."
+  },
+  {
+    id: 44,
+    titulo: "O Quarto Escuro",
+    frente: "Uma mulher entra num quarto completamente escuro sem lanternas nem fósforos e imediatamente sabe que há um cadáver lá dentro. Como?",
+    verso: "A mulher era <span class='highlight'>deficiente visual</span> e havia desenvolvido um olfato extraordinariamente aguçado. O odor característico de decomposição que percebeu ao entrar no quarto era inconfundível para ela, que havia trabalhado anos como auxiliar de medicina legal antes de perder a visão."
+  },
+  {
+    id: 45,
+    titulo: "O Martelo",
+    frente: "Um homem usa um martelo para salvar a própria vida. Como?",
+    verso: "O homem estava enterrado vivo num caixão. Antes de perder os sentidos, bateu freneticamente no madeiro com o martelo que havia guardado no bolso por engano. O barulho do martelo ecoou pela terra <span class='highlight'>e foi ouvido pelos coveiros</span> que ainda estavam no cemitério. Eles o desenterraram a tempo."
+  },
+  {
+    id: 46,
+    titulo: "A Aposta",
+    frente: "Um homem aposta que irá se matar na próxima semana. Ganha a aposta mas não morre. Como?",
+    verso: "Ele apostou com um sádico que lhe disse que se não cumprisse a aposta, o mataria. O homem fingiu a própria morte de forma convincente — <span class='highlight'>orquestrou um falso suicídio</span> com ajuda de um médico cúmplice que assinou o atestado. Ganhou a aposta, escapou do sádico e desapareceu com uma nova identidade."
+  },
+  {
+    id: 47,
+    titulo: "O Espelho",
+    frente: "Um homem olha num espelho e não vê seu próprio reflexo. Enlouquece e morre. O que aconteceu?",
+    verso: "O homem não era vampiro — havia recentemente passado por uma <span class='highlight'>cirurgia de transplante facial</span>. Ao olhar no espelho pela primeira vez após a cirurgia, o rosto que viu era completamente desconhecido. O choque psicológico severo e o surto dissociativo que se seguiu o levaram a uma crise que resultou em parada cardíaca."
+  },
+  {
+    id: 48,
+    titulo: "O Caçador",
+    frente: "Um caçador vê um cervo, aponta a arma mas não atira. Depois de 10 minutos, o cervo cai morto. O que aconteceu?",
+    verso: "O caçador percebeu que o cervo já estava sendo <span class='highlight'>envenenado por outra pessoa</span> — havia um rival que havia preparado iscas envenenadas na área e revendicava o animal. O caçador esperou para provar que não havia atirado. O cervo morreu pelo veneno e o rival acabou preso por caça ilegal com método proibido."
+  },
+  {
+    id: 49,
+    titulo: "O Nado",
+    frente: "Um nadador profissional morre num lago raso com apenas 60 cm de profundidade. Como?",
+    verso: "O nadador havia mergulhado de cabeça em alta velocidade acreditando que o lago era mais fundo. Ao bater a cabeça no fundo, sofreu uma <span class='highlight'>lesão cervical grave</span> que o paralisou instantaneamente. Com os músculos paralisados, virou de barriga para baixo na água rasa e afogou — apesar de ter apenas 60 cm até a superfície."
+  },
+  {
+    id: 50,
+    titulo: "O Mapa",
+    frente: "Um explorador encontra um mapa que o leva à morte, mesmo seguindo-o perfeitamente. O que aconteceu?",
+    verso: "O mapa estava <span class='highlight'>deliberadamente incorreto</span> — havia sido criado por um rival para levá-lo a uma região pantanosa mortal, desenhado com perfeição técnica mas guiando propositalmente para o perigo. O explorador seguiu cada detalhe com precisão absoluta, chegando exatamente onde o mapa queria: ao seu fim."
+  }
+];
+
+// ══════════════════════════════════════════════════
+// ESTADO DO JOGO
+// ══════════════════════════════════════════════════
+let baralho = [];
+let cartaAtual = null;
+let cartasJogadas = 0;
+let virada = false;
+
+function inicializar() {
+  baralho = [...historias].sort(() => Math.random() - 0.5);
+  cartaAtual = null;
+  cartasJogadas = 0;
+  virada = false;
+  atualizarStats();
+  mostrarEstadoVazio();
+  document.getElementById('btnSortear').disabled = false;
+}
+
+function atualizarStats() {
+  document.getElementById('cartasRestantes').textContent = baralho.length;
+  document.getElementById('cartasJogadas').textContent = cartasJogadas;
+  document.getElementById('cartaAtualNum').textContent = cartaAtual ? `#${cartaAtual.id}` : '—';
+  document.getElementById('miniCount').textContent = baralho.length;
+  
+  // mini deck visibility
+  const miniDeck = document.getElementById('miniDeck');
+  miniDeck.style.opacity = baralho.length === 0 ? '0.15' : '1';
+  miniDeck.style.pointerEvents = baralho.length === 0 ? 'none' : 'auto';
+}
+
+function mostrarEstadoVazio() {
+  const container = document.getElementById('cardContainer');
+  container.innerHTML = `
+    <div class="empty-state" id="emptyState">
+      <div class="empty-skull">💀</div>
+      <div class="empty-text">
+        O baralho aguarda...<br>
+        Sortie uma carta para começar
+      </div>
+    </div>`;
+}
+
+function sortearCarta() {
+  if (baralho.length === 0) {
+    mostrarToast('O baralho acabou! Inicie um novo jogo.');
+    return;
+  }
+  
+  cartaAtual = baralho.pop();
+  cartasJogadas++;
+  virada = false;
+  atualizarStats();
+  renderizarCarta();
+  
+  if (baralho.length === 0) {
+    document.getElementById('btnSortear').disabled = true;
+  }
+}
+
+function renderizarCarta() {
+  const container = document.getElementById('cardContainer');
+  container.innerHTML = `
+    <div class="card-scene">
+      <div class="card dealing" id="cartaEl">
+        
+        <!-- FRENTE -->
+        <div class="card-face card-front">
+          <span class="card-number-badge">Nº ${String(cartaAtual.id).padStart(2,'0')}</span>
+          
+          <div class="card-ornament-top">
+            <div class="card-logo">Mystery Stories</div>
+            <div class="ornament-line">
+              <div class="ornament-diamond"></div>
+            </div>
+          </div>
+          
+          <div class="card-skull-center">💀</div>
+          
+          <div class="card-story-section">
+            <div class="story-label">O Enigma</div>
+            <p class="card-story-text">${cartaAtual.frente}</p>
+          </div>
+          
+          <div class="flip-hint">
+            <div class="flip-arrow">↻</div>
+            <span>Revelar Solução</span>
+          </div>
+        </div>
+        
+        <!-- VERSO -->
+        <div class="card-face card-back">
+          <div class="back-header">
+            <div class="back-title">☠ A Solução ☠</div>
+            <div class="back-divider"></div>
+          </div>
+          
+          <div class="solution-scroll">
+            <p class="solution-text">${cartaAtual.verso}</p>
+          </div>
+          
+          <div class="back-footer">
+            <div class="back-ornament"><span>✦</span></div>
+            <div class="back-tip">Clique para voltar ao enigma</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>`;
+
+    const carta = document.getElementById('cartaEl');
+    carta.addEventListener('click', virarCarta);
+}
+
+function virarCarta() {
+    const carta = document.getElementById('cartaEl');
+    if (!carta) return;
+
+    const front = carta.querySelector('.card-front');
+    const back  = carta.querySelector('.card-back');
+
+    carta.style.transition = 'transform 0.35s ease-in';
+    carta.style.transform  = 'rotateY(90deg)';
+
+    setTimeout(() => {
+        virada = !virada;
+
+        if (virada) {
+        front.style.display = 'none';
+        back.style.display  = 'flex';
+        } else {
+        front.style.display = 'flex';
+        back.style.display  = 'none';
+        }
+
+        carta.style.transition = 'none';
+        carta.style.transform  = 'rotateY(-90deg)';
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                carta.style.transition = 'transform 0.35s ease-out';
+                carta.style.transform  = 'rotateY(0deg)';
+            });
+        });
+    }, 350);
+}
+
+function toggleRules() {
+  const panel = document.getElementById('rulesPanel');
+  panel.classList.toggle('open');
+}
+
+function mostrarToast(msg) {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2100);
+}
+
+// EVENTOS
+document.getElementById('btnSortear').addEventListener('click', sortearCarta);
+document.getElementById('btnEmbaralhar').addEventListener('click', () => {
+  if (confirm('Iniciar um novo jogo com o baralho completo embaralhado?')) {
+    inicializar();
+    mostrarToast('Novo jogo iniciado!');
+  }
+});
+
+// INIT
+inicializar();
